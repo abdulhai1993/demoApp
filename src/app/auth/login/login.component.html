@@ -1,0 +1,57 @@
+<div class="auth-box">
+
+  <div>
+
+    <div class="auth-card" *ngIf="!isOneTimePassword">
+      <div class="title">
+        Login
+      </div>
+
+      <div id="Loginpage">
+        <form [formGroup]="formLogin" autocomplete="on">
+          <div class="auth-card-fields">
+
+            <div class="input-wrap">
+              <mat-form-field [floatLabel]="'always'" class="full-width">
+                <mat-label>Username or Email</mat-label>
+                <input formControlName="email" matInput placeholder="example@abc.com" [(ngModel)]="user.email"
+                  (focusout)="emailFocusOut()" required />
+              </mat-form-field>
+            </div>
+
+            <!-- Password -->
+            <!-- appBlockCopyPaste -->
+            <div class="input-wrap">
+              <mat-form-field [floatLabel]="'always'" class="full-width">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" matInput [type]="phide ? 'password' : 'text'" placeholder="******"
+                  [(ngModel)]="user.password" required />
+                <mat-icon matSuffix (click)="phide = !phide">{{phide ? 'visibility' :
+                  'visibility_off'}}</mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="auth-card-btn-box text-center">
+            <div class="text-center">
+              <button *ngIf="!isSubmitted" class="btn-vm-auth full-width" mat-raised-button color="primary"
+                [disabled]="isSubmitted" (click)="login()">
+                Sign In
+              </button>
+              <spinner [visible]='isSubmitted' [color]="'primary'"></spinner>
+
+            </div>
+          </div>
+
+          <!-- <div class="auth-card-forget-link text-center">
+            <a (click)="nevigate('forget-pass')">Forgot Password?</a>
+          </div> -->
+        </form>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

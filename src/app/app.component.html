@@ -1,0 +1,22 @@
+<!-- Load header if User is logged in -->
+<div class="app-layout">
+    <div class="router-output">
+        <div class="inf">
+            <secure-header *ngIf="_isLoggedIn">
+            </secure-header>
+            <!-- <secure-header>
+            </secure-header> -->
+        </div>
+
+        <div class="main-body">
+            <router-outlet></router-outlet>
+        </div>
+
+        <!-- <div [froalaEditor]>Hello, Froala!</div> -->
+
+        <!-- <secure-footer *ngIf="_isLoggedIn">
+        </secure-footer> -->
+    </div>
+</div>
+<toast></toast>
+<page-loader></page-loader>

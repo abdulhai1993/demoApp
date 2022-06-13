@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-xl fixed-top navbar-light navbar-vm">
+  <div class="nav-title-box clearfix">
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a id="/user/management" class="nav-link" routerLink="/user/management/list">
+          <mat-icon>manage_accounts</mat-icon>
+          <span class="item-name">User Management</span>
+        </a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" (click)="openConfirmDialog('logout')">
+
+          <mat-icon>exit_to_app</mat-icon>
+          <span class="item-name">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End of Navbar -->
+<div class="spacer">
+
+</div>

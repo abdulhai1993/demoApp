@@ -1,0 +1,308 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// @import "~@angular/material/prebuilt-themes/veemed-sky-amber.css";
+// @import '~material-design-icons/iconfont/material-icons.css';
+// @import "~roboto-fontface/css/roboto/roboto-fontface.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// @import "~ng-pick-datetime/assets/style/picker.min.css";
+
+
+html{ height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    overflow: hidden;
+}
+
+// .main-body{
+    // overflow-y: auto;
+    // height: 100vh;
+// }
+
+.mat-tab-body-content{
+    overflow: hidden !important;
+}
+
+.input-wrap mat-label {
+    font-size: 15px;
+}
+
+.form-field {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    font-size: 15px;
+    display: block;
+}
+
+.form-field .lms-input {
+    border: 1px solid #ddd;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    width: 100%;
+    border-radius: 2px;
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-width.mat-select {
+    margin-top: 22px !important;
+}
+
+.box-shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.tab-container-box {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 2% 0;
+}
+
+.two-row-card {
+    float: left;
+    width: 100%; padding: 0px -10px 10px 0px;
+}
+
+mat-list-item.role-box {
+    float: left !important;
+    width: 100% !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+mat-list-item.role-box.sidebarselect.selected {
+    background-color: #f5f5f5;
+}
+
+.role-box .mat-list-item-content {
+    padding: 0 0 !important;
+}
+/* Loader CSS */
+
+.page-cs-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(229, 239, 242, 0.95);
+    z-index: 20;
+}
+.mat-dialog-content{
+    height: auto !important;
+    overflow: auto !important;
+}
+.scrollable::-webkit-scrollbar {
+    width: 0.6em;
+}
+.scrollable::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(244, 114, 0);
+    box-shadow: inset 0 0 6px rgb(244, 114, 0);
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #198977;
+  outline: 1px solid #333333;
+}
+.page-cs-loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+.page-cs-loader mat-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mat-dialog-content{max-height:100%
+}
+.dia-control{
+    max-height:90vh
+}
+
+.dia-control::-webkit-scrollbar {
+   width: 1em;
+}
+.dia-control::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.dia-control::-webkit-scrollbar-thumb {
+ background-color: darkgrey;
+ outline: 1px solid slategrey;
+}
+button:focus {outline:0;}
+
+table {
+    width: 100%;
+}
+
+.mat-column-description,.mat-column-pageLink {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 28% !important;
+    width: 28% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    word-break: break-word;
+  
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+/* Loader CSS */
+
+.round-btn{
+    border-radius: 25px;
+    margin: 2px 5px;
+
+}
+
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 100%;
+    height: 50vh;
+}
+.mat-dialog-content
+.click{cursor: pointer;}
+.cdk-overlay-pane{
+    height: auto !important;
+}
+span.item-name {
+    line-height: 12px;
+}
+
+label.label-heading {
+    font-weight: 600;
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+.mat-form-field-infix .fr-wrapper div a:nth-child(1)  {display:none !important}
+
+.home-lb-heading-1{
+    font-size: 20px;
+    color: #666;
+}
+
+.home-sub-lb-heading-1{
+    font-size: 15px;
+    color: #666;
+}
+
+.home-text {
+    font-size: 80px;
+    font-weight: 400;
+    color: #333;
+}
+
+.mat-card:not([class*='mat-elevation-z']) {
+    box-shadow: 0 0 0px rgba(0,0,0,0) !important;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.snipet.download-btn {
+    padding: 20px;
+}
+
+span.mat-button-wrapper {
+    position: relative;
+    top: 2px;
+}
+
+span.mat-button-wrapper i {
+    position: relative;
+    top: -1px;
+}
+.mat-dialog-content {
+    margin: 0 0 0 -24px !important;
+}
+
+.mrt-20 {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    border: 1px solid #e5e5e5;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    color: transparent !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 8px 0 10px 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 10px 0 10px 10px !important;
+    border-top: 10px solid transparent;
+}
+mat-form-field.search-inp {
+    width: 100%;
+    max-width: 600px;
+}
+.search-box {
+    text-align: center;
+}
+
+.page-title i {
+    position: relative;
+    top: 5px;
+}
+
+.page-title button {
+    position: relative;
+    top: -4px;
+    color: #999;
+}
+
+.cus-icon{
+    font-size: 20px !important;
+    margin-bottom: 12px;
+}
+
+.control-fluid {
+    padding: 0px !important;
+}

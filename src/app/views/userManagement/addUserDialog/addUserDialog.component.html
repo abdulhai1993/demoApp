@@ -1,0 +1,122 @@
+<div class="dialog-box-content">
+    <form name="form" [formGroup]="userForm" (keydown.enter)="$event.preventDefault()">
+        <mat-progress-bar *ngIf='isSubmitted' color="warn" mode="indeterminate"></mat-progress-bar>
+        <div class="row align-item-center">
+            <div class="col-md-12">
+                <h1 mat-card-title>Add User</h1>
+            </div>
+
+            <div class="row col-lg-12">
+                <!-- First Name -->
+                <div class="col-lg-6">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="First Name" maxlength="100" [(ngModel)]="newUser.firstName"
+                            formControlName="firstName" name="fname" required trim>
+                        <mat-hint align="end">{{newUser?.firstName?.length || 0}}/100</mat-hint>
+                        <mat-error
+                            *ngIf="userForm.controls['firstName'].touched && userForm.controls['firstName'].errors?.required">
+                            First Name is
+                            <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="userForm.controls['firstName'].errors?.pattern">
+                            First Name is
+                            <strong>invalid</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-lg-6">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Last Name" maxlength="100" [(ngModel)]="newUser.lastName"
+                            formControlName="lastName" name="lname" required trim>
+                        <mat-hint align="end">{{newUser?.lastName?.length || 0}}/100</mat-hint>
+                        <mat-error
+                            *ngIf="userForm.controls['lastName'].touched && userForm.controls['lastName'].errors?.required">
+                            Last Name is
+                            <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="userForm.controls['lastName'].errors?.pattern">
+                            Last Name is
+                            <strong>invalid</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row col-lg-12">
+                <!-- Email -->
+                <div class="col-lg-6">
+                    <mat-form-field class="full-width">
+                        <input matInput [(ngModel)]="newUser.email" placeholder="Email" formControlName="email"
+                            maxlength="50" required trim>
+                        <mat-hint align="end">{{newUser?.email?.length || 0}}/50</mat-hint>
+
+                        <mat-error *ngIf="userForm.controls['email'].errors?.required">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                        <mat-error
+                            *ngIf="!userForm.controls['email'].errors?.required && (userForm.controls['email'].errors?.email) ">
+                            Please enter a valid email
+                        </mat-error>
+                        <mat-error
+                            *ngIf="(userForm.controls['email'].errors?.pattern || userForm.controls['email'].errors?.incorrect)">
+                            Please enter a valid email
+                        </mat-error>
+                        <!-- <mat-error *ngIf="userForm.controls['email'].errors?.notAvailable">
+                                    Email is not available
+                                </mat-error> -->
+                    </mat-form-field>
+                </div>
+
+                
+
+                <!-- Mobile Number -->
+                <div class="col-lg-6">
+                    <!-- (keydown)="mobileNoFunction($event)" -->
+                    <mat-form-field class="full-width">
+                        <!-- <input formControlName="mobileNumber" matInput min="0" type="number" matTooltipPosition="above"
+                                            matTooltip='{{tooltipMobile}}' [maxlength]="maxLengthMobile" placeholder="Mobile Number"
+                                            [(ngModel)]="newUser.mobileNumber"> -->
+                        <input formControlName="mobileNumber" matInput matTooltipPosition="above"
+                            matTooltip='{{tooltipMobile}}' [maxlength]="maxLengthMobile" placeholder="Mobile Number"
+                            [(ngModel)]="newUser.mobileNumber" onlyNumber trim>
+                        <mat-hint align="end">{{newUser?.mobileNumber?.length || 0}}/{{ maxLengthMobile }}</mat-hint>
+                        <mat-error *ngIf="userForm.controls['mobileNumber'].errors?.pattern">
+                            Mobile Number is invalid
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="row col-lg-12">
+
+
+                <!-- Phone Number -->
+                <div class="col-lg-6">
+                    <mat-form-field class="full-width">
+                        <input formControlName="password" matInput matTooltipPosition="above"
+                         [maxlength]="maxLengthPhone" type="password" placeholder="*******"
+                            [(ngModel)]="newUser.password" trim>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div mat-dialog-actions class="row align-item-center dialog-btn-contianer">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-right">
+                <button mat-raised-button class="round-btn" tabindex="-1" (click)="onNoClick()">CANCEL</button>
+
+                <span matTooltipPosition="above"
+                    matTooltip="{{!userForm.valid ? 'Fill the required field' : buttonTooltip}}">
+                    <button mat-raised-button class="round-btn" color="primary"
+                        [disabled]="!userForm.valid || isSubmitted" (click)="onSubmit()" tabindex="2">SUBMIT</button>
+                </span>
+            </div>
+        </div>
+    </form>
+
+</div>

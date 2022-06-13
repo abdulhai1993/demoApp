@@ -1,0 +1,258 @@
+// .inner-page {
+  // background-color: whitesmoke;
+// }
+
+section {
+  padding: 0;
+  min-height: 100vh;
+  overflow: visible;
+  position: relative;
+  // padding: 30px 6%;
+}
+
+
+section.section-abc {
+  background-size: cover !important;
+  color: #fff;
+  z-index: 10;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  text-align: center;
+  border-radius: 10px;
+  color:#000;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  padding: 10px 40px 40px;
+  color: #555;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.inner-container {
+  background-color: white;
+  width: 800px;
+  height: 600px;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100vh - 40vh);
+  height: 100%;
+  float: left;
+}
+
+
+.logo-box img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-box {
+  margin: 1.5rem 0 1.5rem;
+  text-align: center
+}
+
+.logo-box embed {
+  width: 250px;
+}
+
+.auth-card-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // background: url("./../../assets/img/auth.png") 100% center no-repeat scroll;
+  background-size: cover;
+  width: 250px;
+  height: 400px;
+  //  background-color: white;
+  /* margin: 2rem auto 1rem; */
+}
+
+.auth-card-side img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 75px;
+}
+
+.auth-card {
+  padding: 0 20px;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #9E9E9E !important;
+}
+
+::placeholder {
+  color: #9E9E9E !important;
+}
+
+// .auth-card-fields {
+  // border: 1px solid #ccc;
+// }
+
+.auth-card-btn-box {
+  text-align: center;
+  padding: 25px 40px;
+}
+
+.input-wrap .vm-input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 20px;
+  color: #414141;
+}
+
+.input-wrap:last-child .vm-input {
+  border-bottom: none;
+}
+
+.input-wrap {
+  padding: 0 40px;
+}
+
+.vm-input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #b2b2b2;
+}
+
+.vm-input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #b2b2b2;
+}
+
+.vm-input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #b2b2b2;
+
+}
+
+.vm-input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #b2b2b2;
+}
+
+.auth-card-forget-link a {
+  color: #7c7c7c;
+  cursor: pointer;
+  padding: 0px 100px;
+}
+
+.round-btn {
+  border-radius: 25px;
+  color: #000;
+}
+
+.auth-card-resend-link a {
+  color: #7c7c7c;
+  cursor: pointer;
+  padding: 0px 100px;
+}
+
+.auth-card-signup-link {
+  padding: 30px 55px;
+}
+
+.auth-card-signup-link a {
+  color: #198977;
+  cursor: pointer;
+}
+
+.auth-card a {
+  color: #212121;
+  cursor: pointer;
+}
+
+.auth-card-btn-box .btn-vm-auth {
+  font-size: 16px;
+  color: #fff;
+  padding: 0 35px;
+  height: 38px;
+  text-transform: uppercase;
+}
+
+.white-color {
+  color: #fff
+}
+
+// .auth-card-btn-box .btn-vm-auth:hover {
+  // background-color: #fee100;
+  // color: #7c7c7c;
+  // border-color: #fee100;
+// }
+
+.auth-card-btn-box .btn-vm-clear {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 19px;
+  font-size: 17px;
+  color: #929292;
+  padding: 0 35px;
+  line-height: 36px;
+  height: 38px;
+}
+
+.auth-card-btn-box .btn-vm-clear:hover {
+  background-color: #f5f5f5;
+  color: #198977;
+}
+
+/* Loader */
+.loading-txt {
+  color: #929292;
+  font-size: 20px;
+}
+
+.copyright {
+  position: relative;
+  top: 25px;
+  color: lightgrey;
+}
+
+/* new css */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+  // background-color: whitesmoke;
+}
+
+/* .flex-container>div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 450px;
+  height: 100px;
+} */
+
+.footer {
+  height: 50px;
+}
